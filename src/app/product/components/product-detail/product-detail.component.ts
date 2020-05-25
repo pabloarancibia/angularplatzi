@@ -38,7 +38,8 @@ export class ProductDetailComponent implements OnInit {
       title: 'Nuevo',
       image: 'assets/images/banner-1.jpg',
       price: 2500,
-      description: 'nuevo producto cargado por Post'
+      description: 'nuevo producto cargado por Post',
+      cant: 1
     };
 
     this.productsService.createProduct(newProduct)

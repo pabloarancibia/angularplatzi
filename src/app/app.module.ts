@@ -19,6 +19,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QuantityProductsPipe } from './pipes/quantity-products.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DemoComponent,
     PageNotFoundComponent,
     // ProductDetailComponent,
-    LayoutComponent
+    LayoutComponent,
+    QuantityProductsPipe
   ],
   imports: [
     BrowserModule,
