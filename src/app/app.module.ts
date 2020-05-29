@@ -5,22 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import {ProductComponent} from './product/product.component';
 
 import { from } from 'rxjs';
 import { CartComponent } from './cart/cart.component';
-// import { ProductsComponent } from './product/components/products/products.component';
-// import { ContactComponent } from './contact/components/contact/contact.component';
+
 import { DemoComponent } from './demo/demo.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-// import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuantityProductsPipe } from './pipes/quantity-products.pipe';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from './../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import { QuantityProductsPipe } from './pipes/quantity-products.pipe';
     CoreModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
